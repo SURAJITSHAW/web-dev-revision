@@ -1,0 +1,87 @@
+<!-- TODO: Grid Practice -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+
+    <!-- ! Stylesheet -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to left, #3cbeb4, #56c756);
+            color: #ffffff;
+            font-family: monospace;
+            font-size: 2rem;
+            padding: 1em;
+        }
+
+        .grid-container {
+            display: grid;
+            border: 1px solid #000;
+            min-height: 50vh;
+            /* applying grid container styles to specify how many col & row is needed */
+            grid-template-rows: 25% 25%;
+            /* grid-template-columns: 100px 100px 100px; */
+            grid-template-columns: 30% 30% 30%;
+            justify-content: space-around;
+            text-align: center;
+            align-content: space-around;
+
+        }
+
+        .items1{
+            border: 1px solid #000;
+            grid-column: 1/ span 3;
+        }
+        .items2{
+            border: 1px solid #000;
+            grid-row: 2/ 5;
+        }
+        .items3{
+            border: 1px solid #000;
+            grid-area: 2/2/4/4;
+        }
+        .items4{
+            border: 1px solid #000;
+        }
+        .items5{
+            border: 1px solid #000;
+        }
+        .items6{
+            border: 1px solid #000;
+            grid-column: 1/ span 3;
+            order: 6;
+        }
+
+        ul {
+            list-style-position: inside;
+        }
+    </style>
+
+</head>
+<body>
+    <p class="text">Let's learn about Grid Layout: </p>
+    <div class="grid-container">
+        <div class="items1">header</div>
+        <div class="items2">sidebar:
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+        <div class="items3">main</div>
+        <div class="items4">article1</div>
+        <div class="items5">article2</div>
+        <div class="items6">footer</div>
+    </div>
+</body>
+</html>
